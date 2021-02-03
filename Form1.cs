@@ -16,11 +16,12 @@ namespace AddNum
         {
             InitializeComponent();
         }
-
+        //using a running total to add up the numbers
         double total = 0;
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //adds the number in the textbox to the total and displays the new total
             double add = Convert.ToDouble(this.textBox1.Text);
             total = total + add;
             label3.Text = ""+total;
@@ -28,6 +29,7 @@ namespace AddNum
 
         private void button2_Click(object sender, EventArgs e)
         {
+            //resets the total
             total = 0;
             label3.Text = "" + total;
         }

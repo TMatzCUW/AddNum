@@ -22,9 +22,16 @@ namespace AddNum
         private void button1_Click(object sender, EventArgs e)
         {
             //adds the number in the textbox to the total and displays the new total
-            double add = Convert.ToDouble(this.textBox1.Text);
-            total = total + add;
-            label3.Text = ""+total;
+            try
+            {
+                double add = Convert.ToDouble(this.textBox1.Text);
+                total = total + add;
+                label3.Text = "" + total;
+            }
+            catch (Exception ex) //To prevent errors that would give users a heart attack
+            {
+                MessageBox.Show("Please put in a number, not whatever you just attempted","Warning");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

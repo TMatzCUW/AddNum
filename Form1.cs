@@ -39,6 +39,7 @@ namespace AddNum
             //resets the total
             total = 0;
             label3.Text = "" + total;
+            textBox1.Text = "";
         }
     }
 }

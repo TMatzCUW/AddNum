@@ -15,6 +15,8 @@ namespace AddNum
         public Form1()
         {
             InitializeComponent();
+            //focus on textbox for input
+            textBox1.Focus();
         }
         //using a running total to add up the numbers
         double total = 0;
@@ -24,6 +26,7 @@ namespace AddNum
         int shims = 0;
         //another previous for shims
         int previousshims = 0;
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -38,10 +41,12 @@ namespace AddNum
                 label3.Text = "" + total;
                 shims += 1;
                 label5.Text = "" + shims;
+                textBox1.Text = "";
+                label6.Text = "";
             }
             catch (Exception ex) //To prevent errors that would give users a heart attack
             {
-                MessageBox.Show("Please put in a number, not whatever you just attempted","Warning");
+                label6.Text = "Error: Don't do what you just attempted";
             }
         }
 
@@ -55,6 +60,7 @@ namespace AddNum
             label5.Text = "" + shims;
             previousshims = 0;
             previoustotal = 0;
+            label6.Text = "";
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -64,6 +70,12 @@ namespace AddNum
             shims = previousshims;
             label3.Text = "" + total;
             label5.Text = "" + shims;
+            label6.Text = "";
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

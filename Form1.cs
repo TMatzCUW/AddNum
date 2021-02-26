@@ -75,7 +75,21 @@ namespace AddNum
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
+            MessageBox.Show("This is a tool to add things together." + Environment.NewLine + "Input each number you want to add one at a time, press Enter/Add, and the total will be displayed","Help");
+        }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //Displays all the information in a new window and resets the app
+            MessageBox.Show("Total weight = " + total + Environment.NewLine + "Total shims: " + shims,"Totals");
+            total = 0;
+            label3.Text = "" + total;
+            textBox1.Text = "";
+            shims = 0;
+            label5.Text = "" + shims;
+            previousshims = 0;
+            previoustotal = 0;
+            label6.Text = "";
         }
     }
 }

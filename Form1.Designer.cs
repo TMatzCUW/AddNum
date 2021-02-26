@@ -39,8 +39,9 @@ namespace AddNum
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.label6 = new System.Windows.Forms.Label();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -90,7 +91,7 @@ namespace AddNum
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(303, 221);
+            this.button2.Location = new System.Drawing.Point(303, 250);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 5;
@@ -138,6 +139,12 @@ namespace AddNum
             this.menuStrip1.Text = "Help";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(44, 20);
+            this.toolStripMenuItem1.Text = "Help";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -146,11 +153,15 @@ namespace AddNum
             this.label6.Size = new System.Drawing.Size(0, 15);
             this.label6.TabIndex = 10;
             // 
-            // toolStripMenuItem1
+            // button5
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(44, 20);
-            this.toolStripMenuItem1.Text = "Help";
+            this.button5.Location = new System.Drawing.Point(293, 221);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(95, 23);
+            this.button5.TabIndex = 12;
+            this.button5.Text = "Save and Print";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Form1
             // 
@@ -158,6 +169,7 @@ namespace AddNum
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(719, 315);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -193,6 +205,7 @@ namespace AddNum
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.Button button5;
     }
 }
 
